@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Alert Input</title>
+	<style type="text/css">
+		button.number_button_class {
+			width: 40%;
+			height: 50px;
+			text-align: center;
+			color: #ff00ff;
+		}
+	</style>
+</head>
+<body>
+	<H2>Show Your Input Value</H2>
+
+	<input id="input_button" type="text" name="value" value="3">
+
+	<script type="text/javascript">
+		function showInputValue() {
+			var resultValue = document.getElementById("input_button").value;
+			alert("what you input is: " + resultValue);
+		}
+	</script>
+
+	<button type="button" onclick="showInputValue()">Show Value</button>
+
+	<br>
+
+	<input type="text" name="number_input" value="abc" id="number_input_button">
+
+	<script type="text/javascript">
+		
+		function showNumberValue() {
+			var resultNumberValue = document.getElementById("number_input_button").value;
+			if (resultNumberValue == "" || isNaN(resultNumberValue)) {
+				alert("Not Number");
+			} else {
+				alert("Input Number Value is: " + resultNumberValue);
+			}
+		}
+	</script>
+
+	<button
+	 type="button" onclick="showNumberValue()" class="number_button_class"
+	 style="background-color: black; font-size: 150%">
+	Show Result
+	</button>
+
+</body>
+</html>
